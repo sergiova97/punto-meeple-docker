@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+
+  frontend:
+    image: node:20
+    container_name: pm_frontend
+    working_dir: /app
+    volumes:
+      - ./frontend:/app
+    ports:
+      - "5173:5173"
+    command: tail -f /dev/null
