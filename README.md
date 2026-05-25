@@ -83,3 +83,21 @@ docker compose -f docker-compose.yml -f docker-compose.linux.yml up -d
 docker compose exec backend bash
 docker compose exec frontend bash
 ```
+
+### Logs
+
+```bash
+# Ver logs en tiempo real
+docker compose logs -f backend
+docker compose logs -f frontend
+```
+
+### Parar y limpiar
+
+```bash
+# Parar los contenedores
+docker compose down
+
+# Parar y eliminar volúmenes (borra la base de datos)
+docker compose down -v
+```
